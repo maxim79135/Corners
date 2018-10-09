@@ -212,6 +212,7 @@ Makefile: Corners.pro ../../QT/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf ..
 		../../QT/5.10.1/mingw53_32/mkspecs/features/qt_config.prf \
 		../../QT/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf \
 		../../QT/5.10.1/mingw53_32/mkspecs/features/spec_post.prf \
+		.qmake.stash \
 		../../QT/5.10.1/mingw53_32/mkspecs/features/exclusive_builds.prf \
 		../../QT/5.10.1/mingw53_32/mkspecs/features/toolchain.prf \
 		../../QT/5.10.1/mingw53_32/mkspecs/features/default_pre.prf \
@@ -390,6 +391,7 @@ Makefile: Corners.pro ../../QT/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf ..
 ../../QT/5.10.1/mingw53_32/mkspecs/features/qt_config.prf:
 ../../QT/5.10.1/mingw53_32/mkspecs/win32-g++/qmake.conf:
 ../../QT/5.10.1/mingw53_32/mkspecs/features/spec_post.prf:
+.qmake.stash:
 ../../QT/5.10.1/mingw53_32/mkspecs/features/exclusive_builds.prf:
 ../../QT/5.10.1/mingw53_32/mkspecs/features/toolchain.prf:
 ../../QT/5.10.1/mingw53_32/mkspecs/features/default_pre.prf:

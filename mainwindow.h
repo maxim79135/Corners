@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include <QtWidgets>
+#include <cloud.h>
 
 namespace Ui {
 class MainWindow;
@@ -19,6 +20,11 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
+    Cloud *cloudA;
+    Cloud *cloudB;
+
+private:
+    void init_items();
 };
 
 #endif // MAINWINDOW_H

@@ -19,9 +19,24 @@ MainWindow::MainWindow(QWidget *parent) :
     setWindowTitle("Corners");
     ui->graphicsView->setScene(scene);
     ui->graphicsView->setBackgroundBrush(QBrush(QColor(195, 176, 145)));
+
+    init_items();
 }
 
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::init_items() {
+    cloudA = new Cloud;
+    cloudA->setPos(150, 150);
+    cloudA->setSpeed(3.0);
+
+    cloudB = new Cloud;
+    cloudB->setPos(500, 60);
+    cloudB->setSpeed(-1.0);
+
+    scene->addItem(cloudA);
+    scene->addItem(cloudB);
 }
