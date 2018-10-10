@@ -8,7 +8,8 @@ class Cloud : public QObject, public QGraphicsItem
 {
     Q_OBJECT
 public:
-    Cloud();
+    Cloud(int w, int h);
+    Cloud(int w, int h, int sp);
 
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);

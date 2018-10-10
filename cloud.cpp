@@ -1,8 +1,12 @@
 #include "cloud.h"
 
-Cloud::Cloud() : height(50), width(100) {
+Cloud::Cloud(int w, int h) : height(h), width(w) {
+
+}
+
+Cloud::Cloud(int w, int h, int sp) : width(w), height(h), dx(sp){
     PixMap.load(":/img/img/Cloud.png");
-    PixMap = PixMap.scaled(100, 50);
+    PixMap = PixMap.scaled(width, height);
 
     connect(&time, &QTimer::timeout, this, &Cloud::move);
     time.start(50);

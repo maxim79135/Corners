@@ -1,5 +1,7 @@
 <RCC>
     <qresource prefix="/img">
         <file>img/Cloud.png</file>
+        <file>img/background.jpg</file>
+        <file>img/button.png</file>
     </qresource>
 </RCC>

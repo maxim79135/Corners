@@ -32,7 +32,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QStringLiteral("MainWindow"));
-        MainWindow->resize(400, 300);
+        MainWindow->resize(600, 600);
         centralWidget = new QWidget(MainWindow);
         centralWidget->setObjectName(QStringLiteral("centralWidget"));
         gridLayout = new QGridLayout(centralWidget);
@@ -41,6 +41,7 @@ public:
         gridLayout->setObjectName(QStringLiteral("gridLayout"));
         graphicsView = new QGraphicsView(centralWidget);
         graphicsView->setObjectName(QStringLiteral("graphicsView"));
+        graphicsView->setEnabled(true);
         graphicsView->setFrameShape(QFrame::NoFrame);
 
         gridLayout->addWidget(graphicsView, 0, 0, 1, 1);
