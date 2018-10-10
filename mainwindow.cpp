@@ -6,8 +6,7 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    registerButton = new CustomButton(80, 30);
-    registerButton->setPos(300, 350);
+
     init_view();
     init_items();
 
@@ -21,6 +20,45 @@ MainWindow::~MainWindow()
 }
 
 void MainWindow::init_items() {
+    QFont font;
+    font.setPixelSize(15);
+    font.setBold(true);
+
+    nameGame = new QLabel;
+    nameGame->setText("Corners");
+    QFont name;
+    name.setPixelSize(25);
+    name.setBold(true);
+    nameGame->setFont(name);
+    nameGame->setStyleSheet("QLabel{background-color: rgba(195, 176, 145, 80);}");
+    nameGame->move(250, 180);
+
+    login = new QLabel;
+    login->setFont(font);
+    login->setStyleSheet("QLabel{background-color: rgba(195, 176, 145, 80);}");
+
+    password = new QLabel;
+    password->setFont(font);
+    password->setStyleSheet("QLabel{background-color: rgba(195, 176, 145, 80);}");
+
+    login->setText("Login");
+    password->setText("Password");
+
+    login_edit = new QLineEdit;
+    login_edit->setFixedSize(100, 20);
+    login_edit->setFont(font);
+    login_edit->setStyleSheet("QLineEdit{background-color: rgba(195, 176, 145, 80);}");
+
+    password_edit = new QLineEdit;
+    password_edit->setFixedSize(100, 20);
+    password_edit->setFont(font);
+    password_edit->setStyleSheet("QLineEdit{background-color: rgba(195, 176, 145, 80);}");
+
+    login->move(150, 250);
+    password->move(150, 280);
+    login_edit->move(250, 250);
+    password_edit->move(250, 280);
+
     cloudA = new Cloud(100, 50, 3.0);
     cloudA->setPos(150, 100);
 
@@ -30,12 +68,17 @@ void MainWindow::init_items() {
     startButton = new CustomButton(80, 30);
     startButton->setPos(200, 350);
 
-    //registerButton = new CustomButton(80, 30);
-    //registerButton->setPos(300, 350);
+    registerButton = new CustomButton(80, 30);
+    registerButton->setPos(300, 350);
 
     scene->addItem(cloudA);
     scene->addItem(cloudB);
     scene->addItem(startButton);
+    scene->addWidget(login);
+    scene->addWidget(password);
+    scene->addWidget(login_edit);
+    scene->addWidget(password_edit);
+    scene->addWidget(nameGame);
     //scene->addItem(registerButton);
 }
 

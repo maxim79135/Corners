@@ -27,6 +27,11 @@ private:
     Cloud *cloudB;
     CustomButton *startButton;
     CustomButton *registerButton;
+    QLabel *login;
+    QLabel *password;
+    QLabel *nameGame;
+    QLineEdit *login_edit;
+    QLineEdit *password_edit;
 
 private:
     void init_items();
