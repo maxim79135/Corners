@@ -8,14 +8,17 @@ class CustomButton : public QObject, public QGraphicsItem
     Q_OBJECT
 public:
     CustomButton();
-    CustomButton(int w, int h);
+    CustomButton(int w, int h, int wx, int wh);
     void setImage(QString);
+    void setText(QString);
     QRectF boundingRect() const;
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
 
 private:
     int width;
     int height;
+    int window_x;
+    int window_height;
     QPixmap PixmMap;
 
 protected:

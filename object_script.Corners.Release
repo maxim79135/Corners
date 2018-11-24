@@ -1,0 +1,16 @@
+INPUT(
+./release\main.o
+./release\mainwindow.o
+./release\cloud.o
+./release\custombutton.o
+./release\customedit.o
+./release\customlabel.o
+./release\game.o
+./release\view.o
+./release\qrc_img.o
+./release\moc_mainwindow.o
+./release\moc_cloud.o
+./release\moc_custombutton.o
+./release\moc_customlabel.o
+./release\moc_view.o
+);

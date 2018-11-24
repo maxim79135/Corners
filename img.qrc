@@ -3,5 +3,6 @@
         <file>img/Cloud.png</file>
         <file>img/background.jpg</file>
         <file>img/button.png</file>
+        <file>img/background_1.png</file>
     </qresource>
 </RCC>

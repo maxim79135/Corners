@@ -5,6 +5,10 @@
 #include <QtWidgets>
 #include <cloud.h>
 #include <custombutton.h>
+#include <customlabel.h>
+#include <customedit.h>
+#include <view.h>
+#include <game.h>
 
 namespace Ui {
 class MainWindow;
@@ -22,24 +26,34 @@ public:
 private:
     Ui::MainWindow *ui;
     QGraphicsScene *scene;
-    QGraphicsScene *test;
+    QGraphicsScene *second_menu;
+    QGraphicsScene *register_scene;
     Cloud *cloudA;
     Cloud *cloudB;
     CustomButton *startButton;
     CustomButton *registerButton;
-    QLabel *login;
-    QLabel *password;
-    QLabel *nameGame;
-    QLineEdit *login_edit;
-    QLineEdit *password_edit;
+    CustomLabel *login;
+    CustomLabel *password;
+    CustomLabel *nameGame;
+    CustomLabel *playGame;
+    CustomLabel *ExitGame;
+    CustomEdit *login_edit;
+    CustomEdit *password_edit;
+    View *view;
+    Game *game;
 
 private:
     void init_items();
     void init_view();
 
 private slots:
-    void startGame();
-    void testView();
+    void on_startGame();
+    void on_main_menu();
+    void on_register_menu();
+    void on_Show_main_menu();
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MAINWINDOW_H

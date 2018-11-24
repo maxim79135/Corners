@@ -27,15 +27,25 @@ SOURCES += \
         main.cpp \
         mainwindow.cpp \
     cloud.cpp \
-    custombutton.cpp
+    custombutton.cpp \
+    customedit.cpp \
+    customlabel.cpp \
+    game.cpp \
+    view.cpp
 
 HEADERS += \
         mainwindow.h \
     cloud.h \
-    custombutton.h
+    custombutton.h \
+    customedit.h \
+    customlabel.h \
+    constants.h \
+    game.h \
+    view.h
 
 FORMS += \
-        mainwindow.ui
+        mainwindow.ui \
+    ../../Downloads/RabbitMinMax-master/view.ui
 
 RESOURCES += \
     img.qrc
