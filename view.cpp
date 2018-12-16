@@ -117,6 +117,11 @@ void View::mouseReleaseEvent(QMouseEvent *event) {
         ui->label_3->setText(s1);
     }
     game->setSelectedChekerIndex(-1);
+    if (game->getMode() == 1)
+        if (game->getPlayMode() == Game::CT_RED)
+            game->setPlayMode(Game::CT_BLUE);
+        else
+            game->setPlayMode(Game::CT_RED);
 
     Game::ChekerType winner;
     if (game->isGameOver(winner))
@@ -255,6 +260,9 @@ void View::on_pbPlay_clicked() {
 }
 
 void View::on_pushButton_clicked() {
+    game->resset();
+    game->setStep(0);
+    ui->label_2->clear();
     this->close();
 }
 

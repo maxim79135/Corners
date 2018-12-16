@@ -74,8 +74,8 @@ public:
     {
         if (View->objectName().isEmpty())
             View->setObjectName(QStringLiteral("View"));
-        View->resize(600, 600);
-        View->setMinimumSize(QSize(600, 600));
+        View->resize(515, 415);
+        View->setMinimumSize(QSize(515, 415));
         View->setMaximumSize(QSize(515, 415));
         View->setBaseSize(QSize(500, 400));
         actionSave = new QAction(View);
@@ -179,7 +179,7 @@ public:
         View->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(View);
         menuBar->setObjectName(QStringLiteral("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 600, 20));
+        menuBar->setGeometry(QRect(0, 0, 515, 20));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QStringLiteral("menuFile"));
         menuSettings = new QMenu(menuBar);

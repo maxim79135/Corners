@@ -30,8 +30,11 @@ private:
     QGraphicsScene *register_scene;
     Cloud *cloudA;
     Cloud *cloudB;
-    CustomButton *startButton;
-    CustomButton *registerButton;
+    QPushButton *startButton;
+    QPushButton *exitButton;
+    QPushButton *AIButton;
+    QPushButton *player_Button;
+    QPushButton *back_Button;
     CustomLabel *login;
     CustomLabel *password;
     CustomLabel *nameGame;
@@ -48,7 +51,9 @@ private:
 
 private slots:
     void on_startGame();
-    void on_main_menu();
+    void on_AI_menu();
+    void on_player_menu();
+    void on_back_menu();
     void on_register_menu();
     void on_Show_main_menu();
 

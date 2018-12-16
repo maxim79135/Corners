@@ -18,9 +18,12 @@ public:
         CT_BLUE = 2
     };
 
+    void setStep(int _step) { step = _step; }
+    void setMode(int _mode) { mode = _mode; }
+    int getMode() { return mode; }
     int getStep() { return step; }
     void step_plus() { step++; }
-    void setPlayMode(ChekerType gameMode) { gamemode = CT_RED; }
+    void setPlayMode(ChekerType _gameMode) { gamemode = _gameMode; }
     ChekerType getPlayMode() { return gamemode; }
 
     void setActive(bool active) { this->active = active; }
@@ -82,6 +85,7 @@ private:
     bool chekerTurn;
     int AILevel;
     int step;
+    int mode;
     int selectedCheker;
 
     int map[8][8]; // main array

@@ -109,14 +109,15 @@ bool Game::moveSelectedChekerToPosition(const QPoint &pos) {
             return false;
 
     //if (isGameOver(CT_RED)) return true;
-
-    chekerTurn = !chekerTurn;
-    prepareMap();
-    runMinMax(gamemode == CT_RED ? CT_BLUE : CT_RED, AILevel, -EPIC_BIG_VALUE, EPIC_BIG_VALUE);
+    if (mode == 0) {
+        chekerTurn = !chekerTurn;
+        prepareMap();
+        runMinMax(gamemode == CT_RED ? CT_BLUE : CT_RED, AILevel, -EPIC_BIG_VALUE, EPIC_BIG_VALUE);
     ChekerType winner;
     if (isGameOver(winner))
         QMessageBox::information(0, "Attention", winner == CT_RED ? "You win" : "You lost");
     chekerTurn = !chekerTurn;
+    }
 
 /*
     QString s;
